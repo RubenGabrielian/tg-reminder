@@ -11,6 +11,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@twa-dev/sdk": "^6.9.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

@@ -9,11 +9,24 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     emptyOutDir: true,
-    sourcemap: false
+    sourcemap: false,
+    rollupOptions: {
+      external: ['@twa-dev/sdk'],
+      output: {
+        globals: {
+          '@twa-dev/sdk': 'window.Telegram.WebApp'
+        }
+      }
+    }
   },
   server: {
     port: 3000,
     strictPort: true,
     host: true
+  },
+  resolve: {
+    alias: {
+      '@twa-dev/sdk': '@twa-dev/sdk/dist/index.js'
+    }
   }
 })
