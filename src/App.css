@@ -1,0 +1,231 @@
+:root {
+  --yellow-note: #FFD43B;
+  --blue-note: #74C0FC;
+  --green-note: #63E6BE;
+  --bulb-color: #FCC419;
+}
+
+.app {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+  background-color: var(--tg-theme-bg-color, #ffffff);
+  color: var(--tg-theme-text-color, #000000);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  background-color: var(--tg-theme-bg-color, #ffffff);
+  z-index: 10;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.main {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state {
+  text-align: center;
+  max-width: 300px;
+}
+
+.notes-illustration {
+  position: relative;
+  height: 200px;
+  margin-bottom: 2rem;
+}
+
+.note {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+}
+
+.note.yellow {
+  background-color: var(--yellow-note);
+  transform: rotate(-15deg);
+  top: 20px;
+  left: 40px;
+}
+
+.note.blue {
+  background-color: var(--blue-note);
+  transform: rotate(5deg);
+  bottom: 40px;
+  left: 20px;
+}
+
+.note.green {
+  background-color: var(--green-note);
+  transform: rotate(15deg);
+  top: 40px;
+  right: 30px;
+}
+
+.bulb {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--bulb-color);
+  border-radius: 50%;
+}
+
+.dots {
+  position: absolute;
+  width: 20px;
+  height: 60px;
+  background-image: radial-gradient(circle, currentColor 2px, transparent 2px);
+  background-size: 8px 8px;
+  top: 30px;
+  left: 10px;
+}
+
+.waves {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background-image: radial-gradient(circle at top, currentColor 2px, transparent 2px);
+  background-size: 8px 8px;
+  top: 10px;
+  right: 20px;
+  transform: rotate(30deg);
+}
+
+.empty-state h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.empty-state p {
+  color: var(--tg-theme-hint-color, #999);
+  margin: 0;
+  font-size: 1rem;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: var(--tg-theme-bg-color, #ffffff);
+  border-top: 1px solid var(--tg-theme-hint-color, rgba(0, 0, 0, 0.1));
+  position: sticky;
+  bottom: 0;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  color: var(--tg-theme-text-color, #000000);
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-button {
+  background-color: var(--tg-theme-button-color, #2481cc);
+  border: none;
+  padding: 1rem;
+  color: var(--tg-theme-button-text-color, #ffffff);
+  cursor: pointer;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  bottom: 1rem;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  background-color: var(--tg-theme-secondary-bg-color, #f5f5f5);
+  border-radius: 8px;
+  margin-top: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--tg-theme-button-color, #2481cc);
+  color: var(--tg-theme-button-text-color, #ffffff);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.1;
+  margin-bottom: 1em;
+}
