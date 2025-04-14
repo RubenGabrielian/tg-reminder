@@ -3,10 +3,10 @@
     "devCommand": "npm run dev",
     "installCommand": "npm install",
     "framework": "vite",
-    "builds": [
+    "rewrites": [
         {
-            "src": "package.json",
-            "use": "@vercel/node"
+            "source": "/(.*)",
+            "destination": "/index.html"
         }
     ],
     "env": {
